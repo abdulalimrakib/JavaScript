@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <h1 id="one">one</h1>
+        </li>
+        <li>
+            <h1 id="two">two</h1>
+        </li>
+        <li>
+            <h1 id="three">three</h1>
+        </li>
+        <li>
+            <h1 id="four">four</h1>
+        </li>
+        <li>
+            <h1 id="five">five</h1>
+        </li>
+    </ul>
+</body>
+
+<script>
+    //type, timestamp, preventDefault
+    //target, toElement, srcElement, currentTargete
+    //clintX, clintY, screenX, ScreenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    // document.querySelector("ul").addEventListener("click", (e)=>{
+    //     //alert("three clicked")
+    //     console.log("clicked Ul")
+    // }, false)
+
+    // document.querySelector("#three").addEventListener("click", (e)=>{
+    //     //alert("three clicked")
+    //     console.log("clicked Three")
+    //     e.stopPropagation()
+    // } ,false)
+
+
+    document.querySelector("ul").addEventListener("click", (e) => {
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === "H1") {
+            const removeIt = e.target.parentNode
+            console.log(removeIt);
+            removeIt.remove()
+        }
+
+
+    })
+
+
+</script>
+
+</html>
