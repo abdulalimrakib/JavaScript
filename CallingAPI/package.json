@@ -1,8 +1,8 @@
 {
-  "name": "redux",
+  "name": "callingapi",
   "version": "1.0.0",
   "description": "",
-  "main": "01_stateAction.js",
+  "main": "axios.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "redux": "^5.0.0",
-    "redux-logger": "^3.0.6"
+    "axios": "^1.6.2"
   }
 }

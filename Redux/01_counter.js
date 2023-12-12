@@ -1,4 +1,6 @@
+const { applyMiddleware } = require("redux");
 const { createStore, combineReducers } = require("redux");
+const { default: logger } = require("redux-logger");
 
 // State
 const initialState = {
@@ -73,8 +75,10 @@ const rootReducer = combineReducers({
   userR: userReducer      // userReducer is a reducer function
 })
 
-const store = createStore(rootReducer); 
+// for using middleware first install middleware
+const store = createStore(rootReducer, applyMiddleware(logger)); 
 // creating global state for rootReducer
+// redux-logger middleware
 
 store.subscribe(() => {
   console.log(store.getState());
